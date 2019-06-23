@@ -3,7 +3,7 @@ const express = require('express'),
     bodyParser = require('body-parser')
 
 let app = express(),
-  rutas = require('../rutas/ruta')
+  rutas = require('../rutas/persona')
 
 
 app.use(bodyParser.urlencoded({extended:false}))

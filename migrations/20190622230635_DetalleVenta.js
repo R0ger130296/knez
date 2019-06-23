@@ -1,20 +1,20 @@
 
 exports.up = function(knex, Promise) {
     return Promise.all([
-        knex.schema.createTable('DetalleVenta', function(table){
+        knex.schema.createTable('detalleVenta', function(table){
             table.increments('id');
             table.string('descripcion');
-            table.integer('idPersona').references('id').inTable('Persona');
-            table.integer('idTienda').references('id').inTable('Tienda');
-            table.integer('idPatronaje').references('id').inTable('Patronajes');
-            table.integer('idCursos').references('id').inTable('Cursos');
+            table.integer('idPersona').references('id').inTable('persona');
+            table.integer('idTienda').references('id').inTable('tienda');
+            table.integer('idPatronaje').references('id').inTable('patronajes');
+            table.integer('idCursos').references('id').inTable('cursos');
         })
     ])
   };
   
   exports.down = function(knex, Promise) {
       return Promise.all([
-          knex.schema.dropTable('DetalleVenta'),
+          knex.schema.dropTable('detalleVenta'),
       ])
   };
   

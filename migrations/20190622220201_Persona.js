@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-    return Promise.all([  knex.schema.createTable('Persona', function(table){
+    return Promise.all([  knex.schema.createTable('persona', function(table){
         table.increments('id').primary();
         table.string('CI');
         table.string('nombres');
@@ -10,13 +10,13 @@ exports.up = function(knex, Promise) {
         table.string('direccionDomiciliaria');
         table.string('correoElectronico');
         table.string('contraseña');
-        table.integer('idTipoPersona').references('id').inTable('TipoPersona');
+        table.integer('idTipoPersona').references('id').inTable('tipoPersona');
        }),
     ])
 };
 
 exports.down = function(knex, Promise) {
     return Promise.all([
-        knex.schema.dropTable('TipoPerson'),
+        knex.schema.dropTable('person'),
     ]);
 };
