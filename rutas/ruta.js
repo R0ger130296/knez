@@ -6,6 +6,6 @@ let api = express.Router(),
 api.get('/Kawina/leer', control.getDatos)
 api.post('/Kawina/insertar', control.postDatos)
 api.delete('/Kawina/borrar',control.deleteDatos)
-api.put('Kawina/actualizar',control.updateDatos)
+api.put('/Kawina/actualizar',control.updateDatos)
 
 module.exports = api
