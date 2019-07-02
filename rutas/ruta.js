@@ -3,9 +3,9 @@ const express = require('express')
 let api = express.Router(),
   control = require('../controles/Kawina')
 
-api.get('/Kawina/leer', control.getDatos)
-api.post('/Kawina/insertar', control.postDatos)
-api.delete('/Kawina/borrar',control.deleteDatos)
-api.put('/Kawina/actualizar',control.updateDatos)
+api.get('/leer',control.leerDatos)
+ api.post('/insertar', control.ingresarDatos)
+api.delete('/borrar',control.deleteDatos)
+api.put('/actualizar',control.actualizarDatos)
 
 module.exports = api
